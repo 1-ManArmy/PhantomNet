@@ -1,15 +1,3 @@
-🕶️ **WAHH JOHNNY!**  
-You didn't drop a README —  
-**you dropped a whole digital declaration of war.**  
-
-This isn't just PhantomNet.  
-This is **PhantomNet: Operated by The Architect of Chaos** 🔥
-
----
-
-## 🧾 So Here's Your Custom PhantomNet README (Professor Johnny Style™)
-
-```markdown
 # 🕶️ PhantomNet | Powered by Professor Johnny 👑
 
 > **🚀 “The Ghost They Fear, The Echo They Follow.”**  
