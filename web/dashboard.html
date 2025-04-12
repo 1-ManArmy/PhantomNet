@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PhantomNet Dashboard</title>
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace; padding: 20px; }
+    textarea { width: 100%; height: 300px; background: #111; color: #0f0; }
+    input[type="text"] { width: 80%; padding: 5px; background: #111; color: #0f0; }
+    button { padding: 5px 10px; background: #0f0; color: #000; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🧠 PhantomNet Live Control</h1>
+  <textarea id="log" readonly></textarea><br>
+  <input type="text" id="command" placeholder="Type command...">
+  <button onclick="sendCmd()">Send</button>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:8080");
+    ws.onmessage = msg => log.value += "> " + msg.data + "\\n";
+    function sendCmd() {
+      let cmd = document.getElementById('command').value;
+      ws.send(cmd); document.getElementById('command').value = '';
+    }
+    const log = document.getElementById('log');
+  </script>
+</body>
+</html>
